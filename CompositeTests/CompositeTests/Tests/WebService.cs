@@ -18,7 +18,7 @@ namespace Tests
         {
             ProductXml result = this.WebServiceDriver.Get<ProductXml>("/api/XML_JSON/GetProduct/1", "application/xml", false);
 
-            Assert.AreEqual(1, result.Id, "Expected to get product 1");
+            Assert.AreEqual(2, result.Id, "Expected to get product 1");
         }
 
         /// <summary>
