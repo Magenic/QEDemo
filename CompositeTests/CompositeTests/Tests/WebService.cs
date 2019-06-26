@@ -22,6 +22,17 @@ namespace Tests
         }
 
         /// <summary>
+        /// Get single product as XML
+        /// </summary>
+        [TestMethod]
+        public void GetXmlDeserializedCopy()
+        {
+            ProductXml result = this.WebServiceDriver.Get<ProductXml>("/api/XML_JSON/GetProduct/1", "application/xml", false);
+
+            Assert.AreEqual(1, result.Id, "Expected to get product 1");
+        }
+
+        /// <summary>
         /// Get single product as Json
         /// </summary>
         [TestMethod]
